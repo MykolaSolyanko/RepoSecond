@@ -1,0 +1,17 @@
+[req]
+req_extensions = v3_req
+x509_extensions = usr_cert
+distinguished_name = req_distinguished_name
+
+[req_distinguished_name]
+
+[usr_cert]
+nsCertType = client, server, email
+keyUsage = digitalSignature, keyEncipherment, keyAgreement
+extendedKeyUsage = serverAuth, clientAuth, codeSigning
+basicConstraints=CA:FALSE
+
+[v3_req]
+nsCertType = client, server, email
+keyUsage = digitalSignature, keyEncipherment, keyAgreement
+extendedKeyUsage = serverAuth, clientAuth, codeSigning
